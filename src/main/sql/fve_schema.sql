@@ -1,4 +1,4 @@
-create table fve
+create table if not exists fve
 (
     id_number           varchar(30) primary key,
     title               varchar(10),

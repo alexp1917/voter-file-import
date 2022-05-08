@@ -1,4 +1,4 @@
-create table zone_type
+create table if not exists zone_type
 (
     county          varchar(100) not null,
     zone_number     int          not null,
@@ -7,7 +7,7 @@ create table zone_type
     primary key (county, zone_number)
 );
 
-create table zone_code
+create table if not exists zone_code
 (
     county           varchar(100),
     zone_type        int         not null,
@@ -17,13 +17,13 @@ create table zone_code
     index (zone_code)
 );
 
-create table political_party
+create table if not exists political_party
 (
     code        varchar(10) not null primary key,
     description varchar(300)
 );
 
-create table election_mapping
+create table if not exists election_mapping
 (
     county        varchar(100) not null,
     id            int          not null,
