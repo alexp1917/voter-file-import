@@ -2,13 +2,15 @@ load data local infile 'data/ALLEGHENY Zone Types 20220502.txt'
     into table zone_type
     fields terminated by '\t'
     enclosed by '"'
-    lines terminated by '\r\n';
+    lines terminated by '\r\n'
+    (county, zone_number, zone_short_name, zone_long_name);
 
 load data local infile 'data/ALLEGHENY Zone Codes 20220502.txt'
     into table zone_code
     fields terminated by '\t'
     enclosed by '"'
-    lines terminated by '\r\n';
+    lines terminated by '\r\n'
+    (county, zone_type, zone_code, zone_description);
 
 load data local infile 'data/Political Party Codes and Descriptions.txt'
     into table political_party

@@ -1,6 +1,6 @@
 create table if not exists fve
 (
-    id_number           varchar(30) primary key,
+    id_number           varchar(15) primary key,
     title               varchar(10),
     last_name           varchar(80),
     first_name          varchar(80),
@@ -36,7 +36,7 @@ create table if not exists fve
 
 create table if not exists voter_district_list
 (
-    id_number varchar(30) primary key,
+    id_number varchar(15) primary key,
     district_01 varchar(50), district_02 varchar(50),
     district_03 varchar(50), district_04 varchar(50),
     district_05 varchar(50), district_06 varchar(50),
@@ -60,7 +60,7 @@ create table if not exists voter_district_list
 
 create table if not exists voter_votes_list
 (
-    id_number varchar(30) primary key,
+    id_number varchar(15) primary key,
     method_01 varchar(2), choice_01 varchar(10),
     method_02 varchar(2), choice_02 varchar(10),
     method_03 varchar(2), choice_03 varchar(10),

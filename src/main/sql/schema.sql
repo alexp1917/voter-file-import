@@ -1,19 +1,20 @@
 create table if not exists zone_type
 (
+    zone_long_name  varchar(500),
     county          varchar(100) not null,
     zone_number     int          not null,
     zone_short_name varchar(50),
-    zone_long_name  varchar(500),
-    primary key (county, zone_number)
+    primary key (zone_number)
 );
 
 create table if not exists zone_code
 (
-    county           varchar(100),
+    zone_description varchar(500),
     zone_type        int         not null,
     zone_code        varchar(50) not null,
-    zone_description varchar(500),
+    county           varchar(100),
     primary key (zone_type, zone_code),
+    foreign key (zone_type) references zone_type(zone_number),
     index (zone_code)
 );
 
