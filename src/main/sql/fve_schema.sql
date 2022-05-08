@@ -1,4 +1,4 @@
-create table mytable
+create table fve
 (
     id_number           varchar(30) primary key,
     title               varchar(10),
@@ -32,7 +32,7 @@ create table mytable
     county              varchar(100),
     mail_country        varchar(10),
     date_last_changed   date
-)
+);
 
 create table if not exists voter_district_list
 (
